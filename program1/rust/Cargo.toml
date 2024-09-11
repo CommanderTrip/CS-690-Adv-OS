@@ -1,0 +1,6 @@
+[package]
+name = "cs690-program1-in-rust"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
