@@ -50,7 +50,6 @@ int main() {
         token = strtok(NULL, " "); // Second Token of the line
         char *endptr;
         newProcess.waitTime = strtol(token, &endptr, 10);
-        printf("%ld\n", newProcess.waitTime);
         processes[index] = newProcess;
         index++;
     }
