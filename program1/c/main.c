@@ -21,12 +21,19 @@ int main() {
     }
 
     // Get file contents
-    char fileContents[64][64];
+    char lineContent[32];
+    char processNames[32][4];
+    char processTime[32][10];
     int index = 0;
-    while (fgets(fileContents[index], sizeof(fileContents), inputFile)) {
-        printf("%s", fileContents[index]);
+    while (fgets(lineContent, sizeof(lineContent), inputFile)) {
+        char *token = strtok(lineContent, " "); // First Token of the line
+        strcpy(&processNames[index][0], token);
+        token = strtok(NULL, " "); // Second Token of the line
+        strcpy(&processTime[index][0], token);
         index++;
     }
+
+    return 0;
 
     // Create the threads and wait the time
     int numOfThreads = index + 1;
