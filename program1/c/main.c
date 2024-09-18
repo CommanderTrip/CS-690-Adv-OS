@@ -13,26 +13,31 @@ struct Process {
 void *Scheduled_Process(void *process) {
     // Greet
     struct Process *p = (struct Process *)process;
-    printf("Thread%ld: %s begins\n", p->threadId, &p->processName);
+    FILE *outputFile;
+    outputFile = fopen("OutputFile", "a");
+    fprintf(outputFile, "Thread%ld: %s begins\n", p->threadId, &p->processName);
+    fclose(outputFile);
 
     // Loop wait time
     int numOfLoops = p->waitTime / 5;
     for (int i = 0; i < numOfLoops; i++) {
-        printf("Thread%ld: Loop %d of %d loops total\n", p->threadId, i, numOfLoops);
+        outputFile = fopen("OutputFile", "a");
+        fprintf(outputFile, "Thread%ld: Loop %d of %d loops total\n", p->threadId, i, numOfLoops);
+        fclose(outputFile);
         usleep(5000);
     }
 
     // Close
-    printf("Thread%ld: %s ends\n", p->threadId, &p->processName);
+    outputFile = fopen("OutputFile", "a");
+    fprintf(outputFile, "Thread%ld: %s ends\n", p->threadId, &p->processName);
+    fclose(outputFile);
     pthread_exit(NULL);
 }
 
 int main() {
     // Get input file
-    printf("Please enter the input file location or \"1\" to assume \"./InputFile\"\n");
     char fileLocation[128];
-    scanf("%s", fileLocation);
-    if (strcmp(fileLocation, "1") == 0) strcpy(fileLocation, "./InputFile");
+    strcpy(fileLocation, "./InputFile");
     FILE *inputFile = fopen(fileLocation,"r");
     if (inputFile == NULL) {
         printf("Unable to open file.\n");

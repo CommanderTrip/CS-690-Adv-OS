@@ -1,0 +1,44 @@
+Thread4: P4 begins
+Thread3: P3 begins
+Thread1: P1 begins
+Thread2: P2 begins
+Thread4: Loop 0 of 21 loops total
+Thread3: Loop 0 of 10 loops total
+Thread1: Loop 0 of 4 loops total
+Thread2: Loop 0 of 1 loops total
+Thread1: Loop 1 of 4 loops total
+Thread4: Loop 1 of 21 loops total
+Thread2: P2 ends
+Thread3: Loop 1 of 10 loops total
+Thread4: Loop 2 of 21 loops total
+Thread1: Loop 2 of 4 loops total
+Thread3: Loop 2 of 10 loops total
+Thread4: Loop 3 of 21 loops total
+Thread1: Loop 3 of 4 loops total
+Thread3: Loop 3 of 10 loops total
+Thread4: Loop 4 of 21 loops total
+Thread1: P1 ends
+Thread3: Loop 4 of 10 loops total
+Thread4: Loop 5 of 21 loops total
+Thread3: Loop 5 of 10 loops total
+Thread3: Loop 6 of 10 loops total
+Thread4: Loop 6 of 21 loops total
+Thread3: Loop 7 of 10 loops total
+Thread4: Loop 7 of 21 loops total
+Thread4: Loop 8 of 21 loops total
+Thread3: Loop 8 of 10 loops total
+Thread3: Loop 9 of 10 loops total
+Thread4: Loop 9 of 21 loops total
+Thread4: Loop 10 of 21 loops total
+Thread3: P3 ends
+Thread4: Loop 11 of 21 loops total
+Thread4: Loop 12 of 21 loops total
+Thread4: Loop 13 of 21 loops total
+Thread4: Loop 14 of 21 loops total
+Thread4: Loop 15 of 21 loops total
+Thread4: Loop 16 of 21 loops total
+Thread4: Loop 17 of 21 loops total
+Thread4: Loop 18 of 21 loops total
+Thread4: Loop 19 of 21 loops total
+Thread4: Loop 20 of 21 loops total
+Thread4: P4 ends
